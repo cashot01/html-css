@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listas OL e UL</title>
+    <style>
+        h1{
+            color: aqua;
+        } 
+        h2{
+            font-style: normal;
+            color: orangered;
+        } 
+        body{
+            line-height: normal;
+            background-color: purple;
+        }
+        li{
+            font-style: italic;
+            color: hotpink;
+        }
+        dl{
+            font-style: italic;
+            color: hotpink;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> listas</h1>
+    <h2>listas ordenadas</h2> 
+    <!--ordem importa tag ol-->
+    <ol type="I"> <!--type A(LETRAS MAIUSCULAS), a(letras minusculas), i(numeros romanos minusculos), I(NUM ROMANOS MAIUSCULO)-->
+        <li>acordar</li>      <!--vai deixar tudo em ordem 1 acordar, 2 ligar , etc-->
+        <li>ligar</li>
+        <li>cafe</li>
+        <li>bola</li>
+    </ol>
+    <h2>listas nao ordenadas</h2>
+    <ul type="disc"> <!--disc, cicle, square-->
+        <li>pao</li>
+        <li>arroz</li>
+        <li>alface</li>
+        <li>leite</li>
+    </ul>
+    <h2>minhas linguagens </h2>
+    <ol>
+        <li>antigas</li>
+        <ol type="a">  <!--criando subListas-->
+            <li>clipper</li>
+            <li>c++</li>
+        </ol>
+        <li>novas</li>
+        <ol type="a"> <!--start serve para continuar uma lista -->
+            <li>javascript</li>
+            <li>html e css</li>
+        </ol>
+    </ol>
+    <h2>meus jogos favoritos</h2>
+    <ol>
+        <li>nintendo</li>
+        <ul type="square">
+            <li>mario kart</li>
+            <li>donkey kong</li>
+        </ul>
+        <li>xbox</li>
+        <ul type="square">
+            <li>forza</li>
+            <li>cod</li>
+            <ul>
+                <li>mw4</li>
+                <li>mw3</li>
+                <li>ww2</li>
+            </ul>
+        </ul>
+        <li>playStation</li>
+        <ul type="square">
+            <li>apex</li>
+            <li>warzone</li>
+            <li>battlefield</li>
+        </ul>
+    </ol>
+    <h2>lista de definições</h2> <!--dicionario-->
+    <dl>
+        <dt>html</dt> <!--termo-->
+        <dd>linguagem de marcação para a criação </dd> <!--definição do termo-->
+        <dt>CSS</dt>
+        <dd>design de site</dd>
+        <dt>Javascript</dt>
+        <dd>linguagem de programação de interação</dd>
+    </dl>
+
+</body>
+</html> 

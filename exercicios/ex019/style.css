@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*
+html = id    =  css = #     so pode usar uma vez por pagina
+html = class  =  css = .     + de 1 vez
+*/
+
+body{
+    background-color: #28F54A;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color:  #367541;
+}
+
+h1#principal{
+    text-align: center;
+    background-color:#1FC23A ;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+h2{
+    color: #71F788;
+}
+
+.basico{
+    color: green;
+    font-weight: bold;
+}
+.intermediario{
+    color: rgba(255, 255, 0, 0.916);
+}
+.avancado{
+    color: red;
+}
+.destaque{
+    background-color: rgba(181, 181, 58, 0.603);
+    text-transform: uppercase;
+}
