@@ -13,6 +13,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th{
@@ -20,6 +21,13 @@
             padding: 10px;
         }
 
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 10px;
+            background-color: lightgreen;
+        }
         .num{
             text-align: right;
         }
@@ -29,13 +37,30 @@
             color: white;
         }
 
+        thead > tr > th{
+            position: sticky;  /*fixar o cabeçalho na tabela */
+            top: -1px;
+            background-color: gray;
+        }
+       /* tbody > tr:nth-child(2n){  /*efeito zebrado exemplo o 2n vai de 2 em 2
+            (odd = impar), (even= par)
+            background-color: lightgray;
+        } */
+
+        tbody > tr:nth-child(odd){
+            background-color: white;
+        }        
+
+        tbody > tr:nth-child(even){
+            background-color: lightslategray;
+        }
+
         footer{
             color: white;
             text-align: center;
             margin: 0px;
             padding-left: 0px;
             width: auto;
-            
             background-color: darkblue;
              border-radius: 5px ;
         }
@@ -55,17 +80,19 @@
     <p>criando a primeira tabela grande</p>
     <!--anatomia tabela grande
     TABLE
-    THEAD
-        tr, td, th
-    TBODY
-        tr, td, th
-    TFOOT 
-        tr, td, th  -->
+        CAPTION (legenda em cima da tabela)
+        THEAD
+            tr, td, th
+        TBODY
+            tr, td, th
+        TFOOT 
+            tr, td, th  -->
         <table>
+            <caption>população das unidades federativas</caption>
             <thead>
                 <tr>
-                    <th>estado</th>
-                    <th>população</th>
+                    <th scope="col">estado</th>  <!-- scope="col" estados na mesma coluna do estado-->
+                    <th scope="col" style="width: 100px;">população</th> <!--"col" popuações na mesma coluna da população -->
                 </tr>
             </thead>
             <tbody>
@@ -180,7 +207,7 @@
             </tbody>
             <tfoot>
                 <tr>
-                   <th>total de habitantes</th>
+                   <th scope="row">total de habitantes</th> <!--"row" mesma linha -->
                    <td class="num"><strong>210 147 125</strong></td> 
                 </tr>
             </tfoot>
