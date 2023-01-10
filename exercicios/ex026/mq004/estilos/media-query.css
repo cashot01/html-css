@@ -2,8 +2,8 @@
 
 /* todas as demais medias*/
 
-/*typical device breakpoints 
-
+/*typical device breakpoints
+------------------------------
 pequenas telas: até 600px
 celular: 600 até 768px
 tablet: 768 até 992px
@@ -12,6 +12,29 @@ grandes telas: acima de 1200px
 */
 
 @media print {  /*impressora*/
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(../imagens/back-print.jpg); /*desnecessário nese caso*/
+        
+    }
+
+    main{
+        border: 2px solid black;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
 
 }
 
@@ -20,13 +43,38 @@ grandes telas: acima de 1200px
         background-image: url(../imagens/back-tablet.jpg);
     }
 
-    
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
 }
 
-@media screen and (min-width: 992px) and (max-width: 1200px) { /*desktop*/
-    
+@media screen and (min-width: 992px) and (max-width: 1200px) { /*pc*/
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+
 }
 
-@media screen and (min-width: 1200px) { /*telas grandes*/
-    
+@media screen and (min-width: 1200px) { /*grandes telas*/
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main{
+        width: 700px;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
 }
